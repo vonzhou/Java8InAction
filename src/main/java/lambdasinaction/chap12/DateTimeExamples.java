@@ -32,9 +32,9 @@ public class DateTimeExamples {
     };
 
     public static void main(String[] args) {
-        useOldDate();
-        useLocalDate();
-        useTemporalAdjuster();
+//        useOldDate();
+//        useLocalDate();
+//        useTemporalAdjuster();
         useDateFormatter();
     }
 
@@ -62,6 +62,7 @@ public class DateTimeExamples {
         int y = date.get(ChronoField.YEAR);
         int m = date.get(ChronoField.MONTH_OF_YEAR);
         int d = date.get(ChronoField.DAY_OF_MONTH);
+        System.out.println(y + ", " + m + ", " + d);
 
         LocalTime time = LocalTime.of(13, 45, 20); // 13:45:20
         int hour = time.getHour(); // 13
@@ -81,6 +82,7 @@ public class DateTimeExamples {
         LocalTime time1 = dt1.toLocalTime();
         System.out.println(time1);
 
+        System.out.println("--------------");
         Instant instant = Instant.ofEpochSecond(44 * 365 * 86400);
         Instant now = Instant.now();
 

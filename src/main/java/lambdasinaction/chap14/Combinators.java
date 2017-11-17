@@ -5,6 +5,10 @@ import java.util.function.Function;
 public class Combinators {
 
     public static void main(String[] args) {
+        Function<Integer, Integer> f = x -> x + 1;
+        Function<Integer, Integer> g = x -> x + 2;
+        System.out.println(compose(g, f).apply(3));
+        System.out.println("--------------");
         System.out.println(repeat(3, (Integer x) -> 2 * x).apply(10));
     }
 
